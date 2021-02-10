@@ -15,10 +15,11 @@ function addBlocks(count, bonusClass) {
         cont.append(block2)
         let line = addLine(block1[0], block2[0], {
             color: '#ff0000',
-            size: 2,
+            size: 1,
             endPlug: 'arrow2',
             endPlugSize: 1.5,
-            outlineMax: 2.5
+            outlineMax: 2.5,
+            path: $('#lines-type-select').val()
         })
         lines = [line]
         $(block1).data('lines', lines)
@@ -36,9 +37,16 @@ function addBlocks(count, bonusClass) {
             });
         }
     })
+    updateLinesCounter()
 }
+
+function updateLinesCounter() {
+    let count = $('.leader-line').length
+    $('.lines-count-value').text(count)
+}
+
 function removeBlocks(count) {
-    $('.block:lt('+count+')').each(function (i) {
+    $('.block:lt(' + (count * 2) + ')').each(function (i) {
         let $this = $(this)
         let lines = $this.data('lines')
         lines.forEach(line => {
@@ -48,6 +56,7 @@ function removeBlocks(count) {
         });
         $this.remove()
     });
+    updateLinesCounter()
 }
 let blockCount = 10;
 addBlocks(blockCount);

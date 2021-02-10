@@ -9,6 +9,35 @@
     padding: 10px;
 }
 
+.lines-count {
+    width: 150px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000;
+}
+
+.lines-count-value {
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+.lines-type {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.lines-type select,
+.lines-type select:focus {
+    font-size: 16px;
+    margin-left: 10px;
+    outline: none;
+}
+
 .btn {
     width: 150px;
     height: 40px;
