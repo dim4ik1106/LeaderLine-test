@@ -1,0 +1,59 @@
+* {
+    box-sizing: border-box;
+    margin: 0%;
+}
+
+.buttons {
+    width: 100%;
+    display: flex;
+    padding: 10px;
+}
+
+.btn {
+    width: 150px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000;
+    background: #ece4af;
+    cursor: pointer;
+    border-radius: 50px;
+    margin-right: 10px;
+}
+
+.btn:hover {
+    background: #c6c6c6;
+}
+
+.pack-size {
+    font-size: 16px;
+    background: #fff;
+}
+
+.pack-size,
+.pack-size:focus,
+.pack-size:hover {
+    outline: none;
+    background: #fff;
+    padding: 0 15px;
+    cursor: auto;
+}
+
+#blocks-cont {
+    position: relative;
+}
+
+.block {
+    width: 100px;
+    height: 30px;
+    border: 1px solid #000;
+    background: #c6c6c6;
+    cursor: pointer;
+    position: absolute;
+    box-shadow: 1px 1px 10px 0px #00000075;
+}
+
+.block[data-inst = end] {
+    background: #ece4af;
+}
